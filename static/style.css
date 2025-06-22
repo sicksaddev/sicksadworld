@@ -8,7 +8,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 1.6; /*line spacing for general text */
+  line-height: 1.6; /* line spacing for general text */
+}
+
+/* layout wrapper */
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .sidebar {
+    max-width: 240px;
+    flex-shrink: 0;
+  }
+
+  .button-wrapper {
+    justify-content: flex-start;
+  }
+
+  .commands {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .terminal-wrapper {
+    flex: 1;
+  }
 }
 
 
@@ -71,7 +109,7 @@ button {
   max-width: 800px;
   width: 100%;
   margin-bottom: 2rem;
-  text-align:center;
+  text-align: left;
   /* line-height: 5; typical for reading code-like content */
 }
 
