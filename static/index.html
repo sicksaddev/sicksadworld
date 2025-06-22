@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sick Sad World</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="bootMessage()">
+  <h1 onclick="resetTerminal()">SICK SAD WORLD</h1>
+
+  <!-- wrap buttons so we can center them neatly -->
+  <div class="button-wrapper">
+    <div class="commands">
+      <button onclick="runCommand('whoami')">whoami</button>
+      <button onclick="runCommand('skills')">skills</button>
+      <button onclick="runCommand('projects')">projects</button>
+      <button onclick="runCommand('resume')">resume</button>
+      <button onclick="runCommand('contact')">contact</button>
+    </div>
+  </div>
+
+    <div id="prompt">
+    $ <input id="terminal-input" type="text" placeholder="type 'help' to view commands" autocomplete="off" />
+    <div class="terminal-tip">
+      type command or use the buttons above
+    </div>
+  </div>
+
+  <!-- wrap terminal so it's centered on wide screens -->
+  <div class="terminal-wrapper">
+    <div class="terminal" id="terminal-output">
+      booting up...
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

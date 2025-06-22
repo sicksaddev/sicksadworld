@@ -1,0 +1,150 @@
+/* global layout */
+body {
+  background: black;
+  color: lime;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6; /*line spacing for general text */
+}
+
+
+
+/* title */
+h1 {
+  cursor: pointer;
+  color: lime;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 1.2; /* slightly tight, more "blocky" terminal style */
+  margin-bottom: 2rem;
+}
+
+/* button layout */
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.commands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+button {
+  background: lime;
+  color: black;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  font-family: monospace;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.2; /* keeps text vertically centered in the button */
+}
+
+/* terminal centering */
+.terminal-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* terminal output box */
+.terminal {
+  background: #111;
+  padding: 2rem;
+  border: 1px solid lime;
+  white-space: pre-wrap;
+  color: lime;
+  font-family: monospace;
+  min-height: 200px;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align:center;
+  /* line-height: 5; typical for reading code-like content */
+}
+
+/* terminal input */
+#prompt {
+  margin-top: 1rem;
+}
+
+#terminal-input {
+  background: black;
+  color: lime;
+  border: 1px solid lime;
+  outline: none;
+  font-family: monospace;
+  font-size: 1em;
+  width: 80%;
+  padding: 0.4rem;
+  line-height: 2; /* slight spacing inside input field */
+}
+
+/* hints, tips, metadata */
+.terminal-tip {
+  color: lime;
+  font-size: 0.85em;
+  font-style: italic;
+  margin-top: 1em;
+  line-height: 1.4; /* improves readability of smaller text */
+}
+
+/* project list */
+.project-line {
+  display: block;
+  margin-bottom: 0.4em;
+  color: lime;
+  line-height: 1.4; /* keeps space between project entries consistent */
+}
+
+/* links */
+.terminal-link:link,
+.terminal-link:visited {
+  color: #9933FF;
+  text-decoration: underline;
+  font-weight: normal;
+  line-height: 1.4; /* makes multiline links cleaner */
+}
+
+.terminal-link:hover,
+.terminal-link:active {
+  color: lime;
+  text-decoration: underline;
+}
+
+/* help command output */
+.command-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.command-row {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 0.3em;
+  line-height: 1.4; /* keeps spacing consistent in help list */
+}
+
+.cmd {
+  width: 7em;
+  font-weight: bold;
+  color: lime;
+}
+
+.desc {
+  flex: 1;
+  color: lime;
+}
